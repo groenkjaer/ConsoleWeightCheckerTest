@@ -18,6 +18,7 @@ namespace ConsoleWeightChecker
             while (SerialCommunication.ItWorked)
             {
                 _serialPort.Write("p");
+                System.Threading.Thread.Sleep(200);
                 _serialPort.Write("0");
                 Console.WriteLine(_serialPort.ReadExisting());
 
